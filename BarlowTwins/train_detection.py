@@ -268,8 +268,6 @@ def train_det(args):
                 "val/AP50":  100.0 * res["map_50"],
                 "val/AP75":  100.0 * res["map_75"],
             })
-            # miou, pixacc = evaluate_seg_miou(model, eval_dl, device)
-            # log.log(step, {"val/mIoU": 100.0 * miou, "val/pixAcc": 100.0 * pixacc})
 
             print(f"[eval] step {step}: mAP50_voc07 = {map50:.4f}, best so far = {best:.4f}")
 
